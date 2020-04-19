@@ -1,7 +1,7 @@
 module.exports = {
   apps: [
     {
-      name: 'API',
+      name: 'silk-decode-server',
       script: 'server/build/index.js',
       instances: 2,
       autorestart: true,
