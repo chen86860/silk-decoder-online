@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "lib": ["DOM", "ESNext"],
+    "target": "ES5",
+    "jsx": "react",
+    "outDir": "build",
+    "esModuleInterop": true,
+    "experimentalDecorators": true
+  },
+  "include": ["*"]
+}

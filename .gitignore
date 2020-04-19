@@ -1,0 +1,8 @@
+node_modules
+files
+server/build
+server/decoder/silk
+.cache/
+
+dist/
+build
