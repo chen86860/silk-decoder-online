@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom'
 import fileSaver from 'file-saver'
 import './index.scss'
 
-const HOST = 'http://127.0.0.1:3000/decode'
+const HOST = 'https://emmmm.dev/aliyunCGI/silk-decoder/decode'
 
 const App = () => {
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
