@@ -1,7 +1,7 @@
 import { spawn } from 'child_process'
 import path from 'path'
 
-const converterPath = path.resolve(__dirname, 'decoder', 'converter.sh')
+const converterPath = path.resolve(process.cwd(), 'server', 'decoder', 'converter.sh')
 const supportFormat = ['ogg', 'mp3', 'wav']
 
 const decoder = (path, format = 'mp3') =>
