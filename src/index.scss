@@ -32,41 +32,112 @@ h4 {
   body {
     background-color: #000;
     color: #fff;
+    .silk-decoder {
+      &-upload {
+        background: #000;
+        h4 {
+          color: #fff;
+        }
+        &__type {
+          select {
+            color: #fff;
+            background: #000;
+          }
+        }
+      }
+      &-logo {
+        img {
+          filter: brightness(0) invert(1);
+        }
+      }
+    }
   }
 }
 
 .silk-decoder {
   text-align: center;
   h1 {
+    padding: 0 0 1.2rem;
+    font-family: 'Fjalla One', sans-serif;
     border-bottom: 1px solid #ddd;
-    padding-bottom: 20px;
   }
   form {
+    width: 310px;
     text-align: center;
-    width: 200px;
     margin: 10px auto;
     input {
       display: block;
-      margin-top: 20px;
+      margin: 0;
       outline: none;
     }
     input[type='file'] {
       text-align: center;
+      opacity: 0;
+      position: absolute;
+      z-index: -1;
     }
-    input[type='submit'] {
-      width: 200px;
-      height: 40px;
-      -webkit-appearance: none;
-      border: 1px solid #1983d8;
-      background: #2196f3;
-      border-radius: 5px;
-      color: #fff;
-      font-size: 14px;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      &:hover {
-        background: #1983d8;
+  }
+  &-upload {
+    cursor: pointer;
+    background: #f5f7fa;
+    width: 100%;
+    height: 150px;
+    border: 2px dashed #ddd;
+    border-radius: 5px;
+    margin: 0 auto;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    &:hover {
+      border-color: #c5c5c5;
+    }
+    text-align: center;
+    h4 {
+      font-size: 1.1rem;
+      font-weight: bold;
+      margin: 1.2rem auto 0;
+      color: #333;
+    }
+    p {
+      font-size: 0.8rem;
+      color: rgb(155, 155, 155);
+      margin: 0.4rem auto;
+    }
+    &__icon {
+    }
+    &__type {
+      text-align: left;
+      font-size: 0.8rem;
+      color: #9b9b9b;
+      select {
+        margin-left: 0.4rem;
+        option {
+          font-size: 0.8rem;
+          color: #9b9b9b;
+        }
       }
     }
+  }
+
+  &-upload--dragging {
+    border-color: #74b51c;
+  }
+  &-about {
+    width: 310px;
+    margin: 4.8rem auto 0;
+    text-align: left;
+    h2 {
+      font-size: 1rem;
+    }
+    p {
+      line-height: 1.7;
+      font-size: 0.92rem;
+    }
+  }
+  &-logo {
+    transition: all 0.3s ease;
+    text-align: center;
   }
 }

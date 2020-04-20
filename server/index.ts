@@ -1,8 +1,9 @@
 import http from 'http'
 import path from 'path'
 import formidable from 'formidable'
-import decoder from './decoder'
 import fs from 'fs'
+
+import decoder from './decoder'
 
 const HOST = '0.0.0.0'
 const POST = 3000
@@ -39,6 +40,7 @@ http
               })
               .catch((err) => {
                 res.statusCode = 400
+                console.error('Decode error', err)
                 res.end('Decode error: ' + err.message)
               })
           } else {
@@ -52,13 +54,14 @@ http
       })
       return
     }
+
     res.statusCode = 405
     res.end()
   })
   .listen(POST, HOST)
   .on('error', (error) => {
-    console.log('Init server error', error)
+    console.error('Init server error', error)
   })
   .on('listening', () => {
-    console.log(`Server start at http://${HOST}:${POST}`)
+    console.info(`Server start at http://${HOST}:${POST}`)
   })
